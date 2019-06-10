@@ -1,0 +1,15 @@
+sudo openssl passwd -1 > cloud-config-file
+#add password
+vi cloud-config-file
+
+#cloud-config
+ users:
+  - name "ben"
+    passwd: "lfkajfldskfsdlkj"
+    groups:
+      - sudo
+      - docker
+ hostname: coreos-21
+
+sudo coreos-install -d /dev/sda -C stable -c cloud-config-file
+
