@@ -1,0 +1,8 @@
+#cloud-config
+ users:
+  - name "ben"
+    passwd: "lfkajfldskfsdlkj"
+    groups:
+      - sudo
+      - docker
+ hostname: coreos-21
